@@ -66,9 +66,9 @@ class _HomePageState extends State<HomePage> {
 
   String _checkResult() {
     if (_icon1 == _icon2 && _icon2 == _icon3) {
-      return 'Bravo ! Vous avez gagné !';
+      return 'Jackpot !';
     } else {
-      return 'Dommage ! Réessayez !';
+      return 'You Loose... Try again ! !';
     }
   }
 
