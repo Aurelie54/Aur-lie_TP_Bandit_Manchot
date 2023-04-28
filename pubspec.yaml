@@ -70,6 +70,8 @@ flutter:
     - assets/images/fer-a-cheval.png
     - assets/images/pasteque.png
     - assets/images/sept.png
+    - assets/images/jackpot.gif
+    - assets/images/casino.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

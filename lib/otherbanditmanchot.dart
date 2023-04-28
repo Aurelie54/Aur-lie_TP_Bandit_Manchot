@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   String _getRandomSymbol() {
-    const List<String> symbols = ['bar', 'cerise', 'cloche', 'diamant', 'fer-a-cheval', 'pasteque', 'sept'];
+    const List<String> symbols = ['bar', 'cerise', 'diamant', 'sept'];
     final int randomNumber = _random.nextInt(symbols.length);
     return symbols[randomNumber];
   }
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
         // Afficher un message spécial ou jouer une animation si les symboles sont égaux et égaux à sept
         return 'JACKPOT!!!';
       } else {
-        return 'Congratulations, you win!';
+        return 'You Loose... Try again!';
       }
     } else {
       return 'You Loose... Try again!';
@@ -80,20 +80,6 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('assets/images/casino.jpg',
-                width: 200,
-                height: 200,
-                ),
-            Positioned(
-            top: -30,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,)
-                          )
-              ]
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -120,17 +106,9 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
-                color: _resultMessage == 'JACKPOT!!!' ? Colors.red : Colors.black,      
+                color: _resultMessage == 'JACKPOT!!!' ? Colors.red : Colors.black,
               ),
-            ),    
-      Visibility(
-      visible: _resultMessage == 'JACKPOT!!!',
-      child: SizedBox(
-        height: 150,
-        child: Image.asset('assets/images/jackpot.gif'),
-      ),
-    ),
-
+            ),
           ],
         ),
       ),
